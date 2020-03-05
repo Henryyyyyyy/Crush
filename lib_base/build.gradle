@@ -1,14 +1,11 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 android {
     compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
     buildToolsVersion "${BUILD_TOOLS_VERSION}"
+
     defaultConfig {
-        applicationId "me.henry.crush"
         minSdkVersion Integer.parseInt(MIN_SDK_VERSION)
         targetSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
         versionCode Integer.parseInt(VERSION_CODE)
@@ -20,11 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    api project(path: ':lib_base')
-
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KOTLIN_VERSION}"
+    api "androidx.appcompat:appcompat:${ANDROIDX_APPCOMPAT}"
+    api "androidx.core:core-ktx:${ANDROIDX_CORE}"
+    api "androidx.constraintlayout:constraintlayout:${ANDROIDX_CONSTRAINTLAYOUT}"
 }
