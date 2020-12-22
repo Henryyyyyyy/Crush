@@ -3,12 +3,14 @@
 buildscript {
 
     repositories {
+        // 阿里云国内镜像仓库地址(用于解决Gradle文件下载过慢的问题)
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         jcenter()
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -17,6 +19,9 @@ buildscript {
 
 allprojects {
     repositories {
+        // 阿里云国内镜像仓库地址(用于解决Gradle文件下载过慢的问题)
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
 

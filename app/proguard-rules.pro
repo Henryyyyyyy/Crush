@@ -1,21 +1,23 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+#-----------针对本项目的混淆规则--------------
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# 保留实体类和类成员(变量和方法)不被混淆(根据具体情况修改entity的路径)
+#-keep class com.litalk.*.bean.**{*;}
+#-keep class com.litalk.module.*.bean.**{*;}
+#-keep class com.litalk.lib.*.bean.**{*;}
+#-keep class com.litalk.comp.*.bean.**{*;}
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# 保留指定包以及所含子包下的类名和类成员(变量和方法)不被混淆
+#-keep class com.litalk.database.constants.**{*;}
+#-keep class com.litalk.database.beanextra.**{*;}
+#-keep class com.arthenica.mobileffmpeg.**{*;}
+#-keep class com.squareup.wire.** { *; }
+#-keep class com.opensource.svgaplayer.proto.** { *; }
+#-keep class com.litalk.media.core.bean.** { *; }
+#-keep class com.litalk.media.core.db.entity.** { *; }
+#-keep class com.litalk.media.ui.widget.emoji.EmojiData { *; }
+#-keep class com.litalk.media.ui.bean.** { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# 保留指定类名和类成员(变量和方法)不被混淆
+#-keep class com.litalk.comp.dynamic.manager.AVUManager{*;}
+#-keep interface com.litalk.remote.util.MessageEntityConverter{*;}
+#-keep class com.litalk.remote.util.MessageEntityConverterImpl{*;}

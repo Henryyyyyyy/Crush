@@ -1,0 +1,218 @@
+<resources>
+
+    <declare-styleable name="base_CarouselViewPager">
+        <attr name="base_imgWidth" format="integer"  />
+        <attr name="base_imgHeight" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="base_SearchView">
+        <attr name="base_text" format="string"/>
+        <attr name="base_icon" format="reference"/>
+        <attr name="base_color" format="color"/>
+        <attr name="base_bgcolor" format="color"/>
+        <attr name="base_size" format="integer"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="base_CircularImageView">
+        <attr name="base_civ_border" format="boolean" />
+        <attr name="base_civ_border_width" format="dimension" />
+        <attr name="base_civ_border_color" format="color" />
+        <attr name="base_civ_background_color" format="color" />
+        <attr name="base_civ_shadow" format="boolean" />
+        <attr name="base_civ_shadow_color" format="color" />
+        <attr name="base_civ_shadow_radius" format="float" />
+        <attr name="base_civ_shadow_gravity">
+            <flag name="center" value="1" />
+            <flag name="top" value="2" />
+            <flag name="bottom" value="3" />
+            <flag name="start" value="4" />
+            <flag name="end" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="base_CircleImageView">
+        <attr name="base_circle_border_width" format="dimension" />
+        <attr name="base_circle_border_color" format="color" />
+        <attr name="base_circle_border_overlay" format="boolean" />
+        <attr name="base_circle_fill_color" format="color" />
+        <attr name="base_circle_icon" format="reference" />
+        <attr name="base_circle_icon_shown" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="base_SwitchButton">
+        <attr name="base_hasShadow" format="boolean"/>
+        <attr name="base_primaryColor" format="color"/>
+        <attr name="base_primaryColorDark" format="color"/>
+        <attr name="base_offColor" format="color"/>
+        <attr name="base_offColorDark" format="color"/>
+        <attr name="base_shadowColor" format="color"/>
+        <attr name="base_ratioAspect" format="float"/>
+        <attr name="base_isOpened" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="base_LoadingView">
+        <attr name="base_bgColor" format="color"/>
+        <attr name="base_dotColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="base_ShadowContainer">
+        <attr name="base_containerShadowColor" format="color"/>
+        <attr name="base_containerShadowRadius" format="dimension"/>
+        <attr name="base_containerDeltaLength" format="dimension"/>
+        <attr name="base_containerCornerRadius" format="dimension"/>
+        <attr name="base_deltaX" format="dimension"/>
+        <attr name="base_deltaY" format="dimension"/>
+    </declare-styleable>
+
+    <!--圆角矩形图片-->
+    <declare-styleable name="base_RoundImageView">
+        <attr name="base_type" format="enum">
+            <enum name="circle" value="1"/>
+            <enum name="round" value="2"/>
+        </attr>
+        <attr name="base_radius" format="dimension"/>ssss
+    </declare-styleable>
+    <!--加载动画loading-->
+    <declare-styleable name="base_LoadingSamllView">
+        <attr name="base_loading_size" format="dimension"/>
+        <attr name="android:color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="base_SwipeMenuLayout">
+        <attr name="base_leftMenuView" format="reference" />
+        <attr name="base_rightMenuView" format="reference" />
+        <attr name="base_contentView" format="reference" />
+        <attr name="base_canRightSwipe" format="boolean" />
+        <attr name="base_canLeftSwipe" format="boolean" />
+        <attr name="base_fraction" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="base_HalfCircleView">
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="base_SettingItemView">
+        <!--右侧箭头-->
+        <attr name="base_item_arrow" format="boolean"/>
+        <!--切换开关-->
+        <attr name="base_item_switch" format="boolean"/>
+        <!--顶部分割线-->
+        <attr name="base_item_split" format="boolean"/>
+        <!--底部分割线-->
+        <attr name="base_item_split_bottom" format="boolean"/>
+        <!--整体缩进-->
+        <attr name="base_item_indent" format="boolean"/>
+        <!--标题-->
+        <attr name="base_item_title" format="reference|string"/>
+        <attr name="base_item_title_color" format="color"/>
+        <attr name="base_item_title_size" format="dimension"/>
+        <!--子标题-->
+        <attr name="base_item_sub_title" format="reference|string"/>
+        <attr name="base_item_sub_title_color" format="color"/>
+        <attr name="base_item_sub_title_size" format="dimension"/>
+        <!--内容-->
+        <attr name="base_item_content" format="reference|string"/>
+        <attr name="base_item_content_color" format="color"/>
+        <attr name="base_item_content_size" format="dimension"/>
+        <attr name="base_item_content_drawable" format="reference"/>
+        <!--label标签：左侧图标-->
+        <attr name="base_item_label" format="reference"/>
+        <!--label标签：宽度和margin设置（width,leftMargin,topMargin,rightMargin,bottomMargin）
+            直接写数值（","分隔），不用带单位默认dp-->
+        <attr name="base_item_label_width_margin" format="string"/>
+        <attr name="base_item_label_is_avatar" format="boolean"/>
+        <!--右侧图标-->
+        <attr name="base_item_icon" format="reference"/>
+
+    </declare-styleable>
+
+
+
+    <declare-styleable name="base_SwipeBackLayout">
+        <attr name="base_edge_size" format="dimension"/>
+        <attr name="base_edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="base_shadow_left" format="reference"/>
+        <attr name="base_shadow_right" format="reference"/>
+        <attr name="base_shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="base_SwipeBackLayoutStyle" format="reference"/>
+
+    <declare-styleable name="base_ToolbarView">
+        <attr name="base_title" format="string"/>
+        <attr name="base_title_is_left" format="boolean"/>
+        <attr name="base_title_size" format="dimension"/>
+        <!--icon会根据底色自动变色，如果不需要变色使用noColor-->
+        <attr name="base_left_img" format="reference"/>
+        <!--noColor表示不需要变色，使用原始icon-->
+        <attr name="base_left_img_no_color" format="boolean"/>
+        <attr name="base_right_img1" format="reference"/>
+        <attr name="base_right_img1_no_color" format="boolean"/>
+        <attr name="base_right_img2" format="reference"/>
+        <attr name="base_right_img2_no_color" format="boolean"/>
+        <attr name="base_left_txt" format="string"/>
+        <attr name="base_right_txt" format="string"/>
+        <attr name="base_with_finish" format="boolean"/>
+        <attr name="base_with_bottom_line" format="boolean"/>
+        <attr name="base_search_replace_view" format="reference"/>
+        <attr name="base_style_auto" format="boolean"/>
+        <attr name="base_style">
+            <!--默认主题：白底黑字-->
+            <enum name="default_style" value="0"/>
+            <!--透明主题：白字-->
+            <enum name="white_transparent" value="1"/>
+            <!--透明主题：黑字-->
+            <enum name="black_transparent" value="2"/>
+            <!--半透明主题：白字-->
+            <enum name="white_half_transparent" value="3"/>
+        </attr>
+        <!--状态栏渐变：不渐变、黑色渐变、白色渐变，配合base_style=1/2使用-->
+        <attr name="base_status_gradient">
+            <enum name="none" value="0"/>
+            <enum name="black" value="1"/>
+            <enum name="white" value="2"/>
+        </attr>
+        <!--背景(包含状态栏)渐变：不渐变、黑色渐变、白色渐变，配合base_style=1/2使用-->
+        <attr name="base_background_gradient">
+            <enum name="none" value="0"/>
+            <enum name="black" value="1"/>
+            <enum name="white" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="base_ToolbarSearchView">
+        <attr name="base_complete_txt" format="string"/>
+        <attr name="base_with_clear" format="boolean"/>
+        <attr name="base_with_keyboard" format="boolean"/>
+    </declare-styleable>
+    <!--滚轮控件-->
+    <declare-styleable name="base_WheelView">
+        <attr name="base_wheelView_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr format="dimension" name="base_wheelView_textSize"/>
+        <attr format="color" name="base_wheelView_textColorOut"/>
+        <attr format="color" name="base_wheelView_textColorCenter"/>
+        <attr format="color" name="base_wheelView_dividerColor"/>
+        <attr format="dimension" name="base_wheelView_dividerWidth"/>
+        <attr format="float" name="base_wheelView_lineSpacingMultiplier"/>
+    </declare-styleable>
+
+    <!--修复viewPager2被嵌套导致的滑动冲突-->
+    <declare-styleable name="base_FixDragLayout">
+        <attr name="android:orientation"/>
+    </declare-styleable>
+
+    <!--头像控件-->
+    <declare-styleable name="base_CompletableAvatarView">
+        <attr name="base_avatar_size" format="dimension|reference"/>
+        <attr name="base_is_official" format="boolean"/>
+    </declare-styleable>
+</resources>
