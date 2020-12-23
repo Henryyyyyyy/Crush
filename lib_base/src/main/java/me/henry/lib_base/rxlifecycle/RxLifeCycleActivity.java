@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.trello.rxlifecycle2.LifecycleProvider;
@@ -17,7 +18,7 @@ import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 import me.henry.lib_base.swipeback.app.SwipeBackActivity;
 
-public abstract class RxLifeCycleActivity extends SwipeBackActivity implements LifecycleProvider<ActivityEvent>,IRxLifeCycleProvider {
+public abstract class RxLifeCycleActivity extends AppCompatActivity implements LifecycleProvider<ActivityEvent>,IRxLifeCycleProvider {
     private final BehaviorSubject<ActivityEvent> lifecycleSubject = BehaviorSubject.create();
     @Override
     public final Observable<ActivityEvent> lifecycle() {

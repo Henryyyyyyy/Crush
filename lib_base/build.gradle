@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply from:'base.gradle'
 android {
     compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
     buildToolsVersion "${BUILD_TOOLS_VERSION}"
@@ -19,7 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -64,11 +64,14 @@ dependencies {
     api "com.github.CymChad:BaseRecyclerViewAdapterHelper:${RECYCLERVIEWADAPTERHELPER_VERSION}" // BaseRecyclerViewAdapterHelper
     api "com.airbnb.android:lottie:${LOTTIE_VERSION}" // Lottie
 
-    api "org.greenrobot:eventbus:${EVENTBUS_VERSION}" // EventBus
+
 
     // jMimeMagic是一个用于确定文件或流的内容类型的Java库
     api group: 'net.sf.jmimemagic', name: 'jmimemagic', version: '0.1.5'
     // HTML解析库
     api 'org.jsoup:jsoup:1.12.1'
     api 'com.noober.background:core:1.6.3'
+
+//    api "org.greenrobot:eventbus:${EVENTBUS_VERSION}" // EventBus
+    api "com.jeremyliao:live-event-bus-x:${LIVE_DATA_BUS}"
 }
